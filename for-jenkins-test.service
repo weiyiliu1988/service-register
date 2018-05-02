@@ -1,0 +1,11 @@
+[Unit]  
+Description=for jenkins test  
+After=syslog.target  
+  
+[Service]  
+ExecStart=/usr/bin/java -jar /root/target/for-jenkins-test.jar --spring.profiles.active=test  
+SuccessExitStatus=143  
+      
+[Install]  
+WantedBy=multi-user.target 
+
